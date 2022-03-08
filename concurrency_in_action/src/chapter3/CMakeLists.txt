@@ -1,0 +1,2 @@
+add_executable(c3sharingDataBetweenThreads c3sharingDataBetweenThreads.cpp)
+target_link_libraries(c3sharingDataBetweenThreads Threads::Threads)
