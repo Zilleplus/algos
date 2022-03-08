@@ -1,0 +1,2 @@
+add_executable(c2basicThreadManagement c2basicThreadManagement.cpp)
+target_link_libraries(c2basicThreadManagement Threads::Threads)
