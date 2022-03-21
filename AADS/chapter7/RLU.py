@@ -75,15 +75,20 @@ class LinkedNodes:
 
         return lst
 
-    def print(self):
+    def str(self) -> str:
+        output: str = "LinkedList={"
         for el in self.to_list():
-            print(el.to_string())
+            output += el.to_string()
+        output += "}"
+        return output
 
+    def print(self):
+        print(self.str())
 
 # l = LinkedNodes()
 # n1 = Node(1, "first")
 # n2 = Node(2, "second")
-# n3 = Node(3, "tirth")
+# n3 = Node(3, "third")
 # l.push_front(n1)
 # l.push_front(n2)
 # l.push_front(n3)
@@ -125,11 +130,18 @@ class LRU:
         return len(self._map)
 
     def oldest_entry(self):
-        self._elements.back()
+        return self._elements.back()
+
+    def print(self):
+        print("RLU:")
+        print(self._elements)
+        print(self._map)
 
 
 c = LRU(maxNumberOfElements=2)
 c.set(1, "first")
 c.set(2, "second")
 c.set(3, "tirth")
+c.print()
+
 c.get(1)  # should not be here
