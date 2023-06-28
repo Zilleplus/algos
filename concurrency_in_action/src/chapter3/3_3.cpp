@@ -1,5 +1,6 @@
 #include<deque>
 #include<stack>
+#include<iostream>
 
 template<typename T, typename Container = std::deque<T>>
 class stack {
@@ -13,7 +14,7 @@ public:
 
 	bool empty() const;
 	size_t size() const;
-	T& top() const;
+	T& top();
 	T const& top() const;
 	void push(T const&);
 	void push(T&&);
@@ -31,6 +32,8 @@ void problem()
 		// Just before this, an other thread could have emptied 
 		// the stack. -> race condition
 		int const value = s.top();
+		std::cout << "problem() called s.top()=" << value << "\n";
+
 		s.pop();
 		// do_something(value);
 	}

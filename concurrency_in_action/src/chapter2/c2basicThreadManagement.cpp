@@ -70,7 +70,7 @@ struct NotCopyableObject {
 	NotCopyableObject () {}
 	NotCopyableObject (const NotCopyableObject &) = delete;
 };
-void f_with_not_movable(const NotCopyableObject& obj)
+void f_with_not_movable(const NotCopyableObject&)
 {}
 
 void PassingArgumentsToThread()
@@ -171,7 +171,7 @@ void IdentifyingThreads()
 	
 }
 
-int main(int argc, int* argv)
+int main()
 {
 	ThreadManagement();
 	PassingArgumentsToThread();

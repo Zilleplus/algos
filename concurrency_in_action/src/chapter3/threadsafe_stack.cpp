@@ -1,4 +1,3 @@
-#include"threadsafe_stack.h"
+#include "threadsafe_stack.h"
 
-template
-threadsafe_stack<int>;
+template class threadsafe_stack<int>;

@@ -1,5 +1,5 @@
 #include"3_8_hierarchical_mutex.h"
-
+#include<climits>
 void hierarchical_mutex::check_for_hierarchy_violation() {
 	if (this_thread_hierarch_value <= hierarchy_value)
 	{
